@@ -28,15 +28,15 @@
 ```kotlin
 import java.util.Scanner
 fun main(args: Array<String>) {
-	val reader = Scanner(System.`in`)
+  val reader = Scanner(System.`in`)
   var integer:Int = reader.nextInt()
-	var sum:Int = 0
-	
-	for (i in 1..(integer-1)) {
-		sum += i
-	}
-	print(sum)
-	
+  var sum:Int = 0
+      
+    for (i in 1..(integer-1)) {
+      sum += i
+    }
+    
+  print(sum)	
 }
 ```
 <br/>
