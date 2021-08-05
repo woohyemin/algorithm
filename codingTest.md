@@ -32,9 +32,9 @@ fun main(args: Array<String>) {
   var integer:Int = reader.nextInt()
   var sum:Int = 0
       
-    for (i in 1..(integer-1)) {
-      sum += i
-    }
+  for (i in 1..(integer-1)) {
+    sum += i
+  }
     
   print(sum)	
 }
