@@ -165,3 +165,76 @@ fun main(args: Array<String>) {
 
 ### [통과 여부]
 통과
+
+<br/>
+<br/>
+<br/>
+
+## 부족한 금액 계산하기
+
+### [문제]
+
+새로 생긴 놀이기구는 인기가 매우 많아 줄이 끊이질 않습니다.  
+이 놀이기구의 원래 이용료는 price원 인데, 놀이기구를 N 번 째 이용한다면 원래 이용료의 N배를 받기로 하였습니다.  
+즉, 처음 이용료가 100이었다면 2번째에는 200, 3번째에는 300으로 요금이 인상됩니다.  
+놀이기구를 count번 타게 되면 현재 자신이 가지고 있는 금액에서 얼마가 모자라는지를 return 하도록 solution 함수를 완성하세요.  
+단, 금액이 부족하지 않으면 0을 return 하세요.
+
+<br/>
+
+### [입력]
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+<br/>
+
+### [출력]
+N 이하의 자연수 중 모든 3의 배수 그리고 5의 배수의 합  
+<br/>
+
+### [예시]
+1) 입력 : 1000  /  출력 : 234168
+2) 입력 : 50  /  출력 : 593
+<br/>
+
+### [내 코드]
+```kotlin
+import java.util.Scanner
+fun main(args: Array<String>) {
+	val reader = Scanner(System.`in`)
+	var integer: Int = 0
+	var sum: Int = 0
+
+	while (true) {
+		// println("1000 이하의 자연수로 입력해주세요!")
+		integer = reader.nextInt()
+		
+		if (integer <= 1000) {
+			break
+		} // else{
+			// println("1000 초과 입력! 다시 입력해주세요!!")
+		// }
+		
+	}
+	
+	for (i in 1..integer) {
+		if ((i%3) == 0) { // 3의 배수일 때 sum에 i 더하기 (3의 배수이면서 5의 배수인 경우 3의 배수일 때 i에 더해지고 if문 나감)
+			sum += i
+		} else if ((i%5) == 0) { // 5의 배수일 때 sum에 i 더하기
+			sum += i
+		}
+	}
+	
+	println(sum)
+
+}
+```
+<br/>
+
+### [통과 여부]
+통과
+
