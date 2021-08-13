@@ -112,52 +112,44 @@ fun main(args: Array<String>) {
 
 ### [문제]
 
-N(1000 이하의 자연수)을 입력하고 N 이하의 자연수 중 3의 배수, 5의 배수의 합을 구하는 프로그램을 작성하십시오.
+함수의 정의와 호출을 실습할 수 있는 아주 간단한 문제입니다.  
+서로 다른 두 정수를 비교하여 더 작은 값을 출력해내는 Min 함수를 작성하시면 됩니다.
 
 <br/>
 
 ### [입력]
-1000 이하의 자연수 
+서로 다른 두 정수
 <br/>
 
 ### [출력]
-N 이하의 자연수 중 모든 3의 배수 그리고 5의 배수의 합  
+두 정수 중 값이 작은 정수  
 <br/>
 
 ### [예시]
-1) 입력 : 1000  /  출력 : 234168
-2) 입력 : 50  /  출력 : 593
+1) 입력 : 10 20  /  출력 : 10
+2) 입력 : -5 -30  /  출력 : -30
 <br/>
 
 ### [내 코드]
 ```kotlin
 import java.util.Scanner
 fun main(args: Array<String>) {
+	// 공백을 기준으로 한번에 여러 값을 입력받으려면 이렇게
 	val reader = Scanner(System.`in`)
-	var integer: Int = 0
-	var sum: Int = 0
-
-	while (true) {
-		// println("1000 이하의 자연수로 입력해주세요!")
-		integer = reader.nextInt()
-		
-		if (integer <= 1000) {
-			break
-		} // else{
-			// println("1000 초과 입력! 다시 입력해주세요!!")
-		// }
-		
-	}
+	var num1:Int = reader.nextInt()
+	var num2:Int = reader.nextInt()
 	
-	for (i in 1..integer) {
-		if ((i%3) == 0) { // 3의 배수일 때 sum에 i 더하기 (3의 배수이면서 5의 배수인 경우 3의 배수일 때 i에 더해지고 if문 나감)
-			sum += i
-		} else if ((i%5) == 0) { // 5의 배수일 때 sum에 i 더하기
-			sum += i
+	fun Min(num1: Int, num2: Int) {
+		if (num1 < num2) {
+			print(num1)
+		} else if (num1 > num2) {
+			print(num2)
+		} else {
+			print("두 정수는 같은 수인 것 같습니다")
 		}
 	}
 	
-	println(sum)
+	Min(num1, num2)
 
 }
 ```
